@@ -1,5 +1,5 @@
-SeeIt!
-======
+See It!
+=======
 
 Git projects viewer.
 
