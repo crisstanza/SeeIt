@@ -1,0 +1,4 @@
+#!/bin/sh
+clear
+cd classes
+java main.Main
