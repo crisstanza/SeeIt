@@ -1,7 +1,10 @@
 package main.window;
 
+import java.awt.event.ActionListener;
 import java.awt.Color;
 import java.awt.Dimension;
+
+import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -38,6 +41,11 @@ public final class MainWindow extends JFrame {
 		//
 		btRefresh.setText("refresh");
 	        btRefresh.setBounds(280+8+8, 8, 96, 24);
+		btRefresh.addActionListener(new ActionListener() {
+			public void actionPerformed(final ActionEvent evt) {
+				btRefreshActionPerformed(evt);
+			}
+		});
 	        getContentPane().add(btRefresh);
 		//
 	        separator.setBounds(0, 24+8+8, 402, 2);
@@ -46,6 +54,9 @@ public final class MainWindow extends JFrame {
 		//
 		pack();
 		setVisible(true);
+	}
+
+	private final void btRefreshActionPerformed(final ActionEvent evt) {
 	}
 
 }
