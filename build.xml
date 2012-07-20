@@ -3,16 +3,16 @@
 <project name="SeeIt" basedir="." default="make">
 
 	<target name="clean">
-		<delete dir="classes"/>
+		<delete dir="classes" />
 	</target>
 
 	<target name="make" depends="clean">
-		<mkdir dir="classes"/>
+		<mkdir dir="classes" />
 		<javac srcdir="src" destdir="classes" />
 	</target>
 
 	<target name="run" depends="make">
-		<java classpath="classes" classname="main.Main" />
+		<java classpath="classes" classname="main.Main" fork="true" />
 	</target>
 
 </project>
