@@ -30,7 +30,7 @@ public final class MainWindow extends JFrame {
 		setTitle("See It!");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
-		setPreferredSize(new Dimension(402, 120));
+		setPreferredSize(new Dimension(402, 118));
 		setLocationRelativeTo(null);
 		setResizable(false);
 		//
@@ -50,6 +50,14 @@ public final class MainWindow extends JFrame {
 		//
 	        separator.setBounds(0, 24+8+8, 402, 2);
 	        getContentPane().add(separator);
+		//
+		lbBranch.setText("Branch:");
+	        lbBranch.setBounds(8, 24+8+8+8+8, 72, 24);
+	        getContentPane().add(lbBranch);
+		//
+		tfBranch.setEditable(false);
+	        tfBranch.setBounds(72+8+8, 24+8+8+8+8, 200, 24);
+	        getContentPane().add(tfBranch);
 		//
 		//
 		pack();
