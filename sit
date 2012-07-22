@@ -1,4 +1,3 @@
 #!/bin/sh
 clear
-cd classes
-java main.Main
+java -classpath classes main.Main $1
