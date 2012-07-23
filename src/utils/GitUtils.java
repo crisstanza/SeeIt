@@ -6,7 +6,7 @@ public final class GitUtils {
 	}
 
 	public final static String gitBranch(final String projectPath) {
-		return FileSystemUtils.runCommand("git branch", projectPath);
+		return FileSystemUtils.runCommand("/usr/bin/git branch", FileSystemUtils.getCanonicalPath(projectPath));
 	}
 
 }
