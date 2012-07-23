@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 
 public final class FileSystemUtils {
 
+	public static final String LINE_SEPARATOR = System.getProperty("line.separator");
+
 	private FileSystemUtils() {
 	}
 
@@ -18,7 +20,7 @@ public final class FileSystemUtils {
 		}
 	}
 
-	public static final String runCommand(final String command, final String path) {
+	public static final String runCommand(final String path, final String... command) {
 		try {
 			final ProcessBuilder pb = new ProcessBuilder(command);
 			pb.redirectErrorStream(true);
@@ -29,7 +31,7 @@ public final class FileSystemUtils {
 			final StringBuilder sb = new StringBuilder();
 			String line;
 			while ((line = is.readLine()) != null) {
-			      sb.append(line + "\n");
+			      sb.append(line).append(FileSystemUtils.LINE_SEPARATOR);
 			}
 			return sb.toString();
 		} catch (final Exception exc) {
