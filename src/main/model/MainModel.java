@@ -6,10 +6,6 @@ public final class MainModel {
 
 	private String projectPath;
 
-	//
-
-	private String branch;
-
 	public final String getProjectPath() {
 		return projectPath;
 	}
@@ -19,6 +15,8 @@ public final class MainModel {
 	}
 
 	//
+
+	private String branch;
 
 	public final String getBranch() {
 		return branch;
